@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <!-- 设置字符编码为 UTF-8 -->
+  <meta charset="utf-8" />
+  <!-- 适配不同设备的视口设置 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 页面标题 -->
+  <title>CSS 核心概念：背景、盒模型、布局、动画</title>
+  <style>
+    /* 全局样式重置，去除默认的内外边距 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 页面主体样式，添加背景动画 */
+    body {
+      font-family: Arial, sans-serif;
+      animation: backgroundChange 10s infinite alternate;
+    }
+
+    /* 定义背景颜色渐变动画 */
+    @keyframes backgroundChange {
+      0% {
+        background-color: #f0f0f0;
+      }
+      50% {
+        background-color: #e0e0ff;
+      }
+      100% {
+        background-color: #d0d0ff;
+      }
+    }
+
+    /* 一级标题样式 */
+    h1 {
+      color: red;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    /* 二级标题样式 */
+    h2 {
+      margin: 20px;
+    }
+
+    /* 章节样式 */
+    section {
+      background-color: white;
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 盒模型样式 */
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 1px dashed #333;
+      background-color: skyblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 弹性容器样式 */
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* 动画样式，为盒模型添加淡入淡出和旋转动画 */
+    .animated-box {
+      animation: fadeInOut 3s infinite, rotate 5s infinite linear;
+    }
+
+    /* 定义淡入淡出动画 */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* 定义旋转动画 */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 定义左右平移动画 */
+    @keyframes horizontalMove {
+      0% {
+        transform: translateX(-200px);
+      }
+      100% {
+        transform: translateX(200px);
+      }
+    }
+
+    /* 带有平移动画的盒模型样式 */
+    .moving-box {
+      animation: horizontalMove 3s infinite alternate;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 页面主标题 -->
+  <h1>CSS 核心概念：背景、盒模型、布局、动画</h1>
+
+  <!-- 背景板块 -->
+  <h2>背景</h2>
+  <section>
+    <p>CSS 的基本能力之一是可以为页面元素设置背景。通过背景属性，我们可以改变元素的背景颜色、添加背景图片、控制背景的重复方式等。例如，在本页面中，我们使用了 CSS 动画来实现页面背景颜色的渐变效果。</p>
+  </section>
+
+  <!-- 布局板块 -->
+  <h2>布局</h2>
+  <section>
+    <div class="flex-container">
+      <!-- 天蓝色正方形图片，这里用 div 模拟 -->
+      <div class="box"></div>
+    </div>
+  </section>
+
+  <!-- 盒模型板块 -->
+  <h2>盒模型</h2>
+  <section>
+    <div class="flex-container">
+      <!-- 天蓝色盒模型 -->
+      <div class="box"></div>
+    </div>
+  </section>
+
+  <!-- 动画板块 -->
+  <h2>动画</h2>
+  <section>
+    <div class="flex-container">
+      <!-- 带有动画效果的盒模型 -->
+      <div class="box animated-box"></div>
+    </div>
+  </section>
+
+  <!-- 平移动画板块 -->
+  <h2>平移动画</h2>
+  <section>
+    <div class="flex-container">
+      <!-- 带有平移动画效果的盒模型 -->
+      <div class="box moving-box">我爱web</div>
+    </div>
+  </section>
+</body>
+
+</html>
