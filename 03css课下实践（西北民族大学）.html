@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西北民族大学</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #1a3650;
+            --secondary-color: #c5a568;
+            --accent-color: #4a7c8c;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            display: flex; /* 添加 flex 布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 校徽容器样式 */
+        .school-logo {
+            width: 50px; /* 校徽宽度 */
+            height: 50px; /* 校徽高度 */
+            margin-right: 20px; /* 校徽右侧间距 */
+        }
+
+        .school-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 保持图片比例 */
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 首页横幅 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(26, 54, 80, 0.8), rgba(26, 54, 80, 0.8)),
+                        url('https://picsum.photos/1920/1080?grayscale') center/cover;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 简介部分 */
+        .about {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .about-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* 特色学科展示 */
+        .disciplines {
+            padding: 5rem 2rem;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .icon-item i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* 图片画廊 */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            aspect-ratio: 4/3;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- 校徽容器 -->
+        <div class="school-logo">
+            <img src="t.jpg" alt="校徽"> <!-- 替换为实际的校徽图片路径 -->
+        </div>
+        <div class="nav-links">
+            <!-- 使用 <a> 标签包裹导航栏文字 -->
+            <a href="#home">首页</a>
+            <a href="#about">学校简介</a>
+            <a href="#disciplines">学科建设</a>
+            <a href="#gallery">校园风光</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>西北民族大学</h1>
+            <p>勤学 敬业 团结 创新</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-cards">
+            <div class="card">
+                <h2>历史沿革</h2>
+                <p>创建于1950年，是新中国成立后建立的第一所民族高等院校...</p>
+            </div>
+            <div class="card">
+                <h2>办学理念</h2>
+                <p>秉承"以人为本，德育为先"的教育理念，培养各民族优秀人才...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="disciplines" id="disciplines">
+        <div class="icon-grid">
+            <div class="icon-item">
+                <i class="fas fa-atom"></i>
+                <h3>民族学</h3>
+                <p>国家级重点学科</p>
+            </div>
+            <div class="icon-item">
+                <i class="fas fa-book"></i>
+                <h3>中国语言文学</h3>
+                <p>省级重点学科</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="gallery-item">
+            <!-- 修正图片标签 -->
+            <img src="s.jpg" alt="校园风光">
+        </div>
+    </section>
+</body>
+</html>
