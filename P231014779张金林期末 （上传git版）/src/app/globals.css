@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  
+  /* 游戏化彩色主题定义 */
+  --color-safety-pink: #ec4899;
+  --color-safety-purple: #8b5cf6;
+  --color-safety-blue: #3b82f6;
+  --color-safety-yellow: #eab308;
+  --color-safety-green: #10b981;
+  --color-safety-orange: #f97316;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* main.css 样式迁移自 practice/main.css */
+h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+/* 轮播图动画 */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 游戏化彩色动画 */
+@keyframes safety-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes rainbow-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  25% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 25px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.5), 0 0 30px rgba(249, 115, 22, 0.3);
+  }
+  75% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.5), 0 0 25px rgba(236, 72, 153, 0.3);
+  }
+}
+
+@keyframes colorful-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes sparkle-dance {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.8);
+    opacity: 0.6;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-text-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 动画工具类 */
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.5s ease-out forwards;
+}
+
+.animate-hero-text {
+  animation: hero-text-reveal 1s ease-out forwards;
+}
+
+.animate-safety-float {
+  animation: safety-float 3s ease-in-out infinite;
+}
+
+.animate-rainbow-glow {
+  animation: rainbow-glow 2s ease-in-out infinite;
+}
+
+.animate-sparkle-dance {
+  animation: sparkle-dance 4s ease-in-out infinite;
+}
+
+/* 自定义工具类 */
+.safety-pattern-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+}
+
+.safety-border-pattern {
+  border-image: linear-gradient(45deg, var(--color-safety-pink), var(--color-safety-purple), var(--color-safety-blue)) 1;
+}
+
+.safety-text-gradient {
+  background: linear-gradient(135deg, var(--color-safety-purple), var(--color-safety-pink), var(--color-safety-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 彩虹装饰 */
+.rainbow-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(236, 72, 153, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%, 
+    rgba(59, 130, 246, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+    rgba(234, 179, 8, 0.1) 100%);
+  border-radius: 50%;
+}
+
+/* 游戏化装饰 */
+.game-pattern {
+  position: relative;
+}
+
+.game-pattern::after {
+  content: '🎮';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  opacity: 0.3;
+}
+
+/* 轮播图特效 */
+.hero-banner-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(168, 85, 247, 0.8) 0%,
+    rgba(236, 72, 153, 0.6) 30%,
+    rgba(59, 130, 246, 0.4) 60%,
+    rgba(16, 185, 129, 0.8) 100%
+  );
+}
+
+.hero-text-shadow {
+  text-shadow: 
+    0 0 10px rgba(236, 72, 153, 0.5),
+    0 0 20px rgba(139, 92, 246, 0.3),
+    0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+@media (max-width: 768px) {
+  .safety-pattern-bg {
+    background-image: 
+      radial-gradient(circle at 30% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 60%);
+  }
+  
+  .safety-float {
+    animation: safety-float 2s ease-in-out infinite;
+  }
+  
+  .hero-banner-mobile {
+    height: 50vh;
+  }
+  
+  .hero-text-mobile {
+    font-size: 2rem;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, 
+    rgba(236, 72, 153, 0.1), 
+    rgba(139, 92, 246, 0.1));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, 
+    var(--color-safety-pink), 
+    var(--color-safety-purple));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, 
+    var(--color-safety-purple), 
+    var(--color-safety-blue));
+}

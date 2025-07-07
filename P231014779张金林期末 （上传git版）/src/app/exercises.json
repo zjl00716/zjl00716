@@ -1,0 +1,98 @@
+[
+  {
+    "id": 2,
+    "title": "🔥 消防安全·火场逃生术",
+    "description": "学习火灾逃生技巧，掌握灭火器使用方法，成为校园消防小英雄！了解火灾预防和应急处理。",
+    "link": "/practice/my-app",
+    "imageUrl": "/practice/images/消防安全.png",
+    "tags": ["消防安全", "火灾逃生"]
+  },
+  {
+    "id": 3,
+    "title": "🏊‍♂️ 防溺水安全·水中守护神",
+    "description": "掌握游泳安全知识，学习水中自救和他救技能，远离溺水危险，享受安全戏水。",
+    "link": "/practice/index",
+    "imageUrl": "/practice/images/防溺水安全.png",
+    "tags": ["防溺水", "游泳安全"]
+  },
+  {
+    "id": 4,
+    "title": "🚫 毒品防范·健康卫士",
+    "description": "认识毒品的危害，学会拒绝不良诱惑，保护自己和同学们的身心健康。",
+    "link": "/practice/03-css-01",
+    "imageUrl": "/practice/images/dupin.webp",
+    "tags": ["毒品防范", "健康教育"]
+  },
+  {
+    "id": 5,
+    "title": "🚗 交通安全·马路小侦探",
+    "description": "学习交通规则，掌握安全过马路技巧，成为遵守交通法规的好学生。",
+    "link": "/practice/03-css-02",
+    "imageUrl": "/practice/images/交通安全.png",
+    "tags": ["交通安全", "出行安全"]
+  },
+  {
+    "id": 6,
+    "title": "🏫 校园安全·友爱守护者",
+    "description": "学习防霸凌知识，掌握校园安全技能，创建和谐友爱的校园环境。",
+    "link": "/practice/04-css-01",
+    "imageUrl": "/practice/images/校园安全.png",
+    "tags": ["校园安全", "防霸凌"]
+  },
+  {
+    "id": 7,
+    "title": "🌐 网络安全·数字小卫士",
+    "description": "学习网络安全知识，防范网络诈骗，保护个人信息安全，做文明上网小公民。",
+    "link": "/practice/04-css-02",
+    "imageUrl": "/practice/images/网络安全.png",
+    "tags": ["网络安全", "信息保护"]
+  },
+  {
+    "id": 8,
+    "title": "⚡ 用电安全·电力小专家",
+    "description": "掌握安全用电知识，学习触电急救方法，远离电气危险，安全使用电器。",
+    "link": "/practice/04-css-02-relative",
+    "imageUrl": "/practice/images/用电安全.png",
+    "tags": ["用电安全", "电器安全"]
+  },
+  {
+    "id": 9,
+    "title": "🍎 食品安全·营养小达人",
+    "description": "学习食品安全知识，识别不良食品，养成健康饮食习惯，保护肠胃健康。",
+    "link": "/practice/05-news01",
+    "imageUrl": "/practice/images/食品安全.png",
+    "tags": ["食品安全", "健康饮食"]
+  },
+  {
+    "id": 10,
+    "title": "🌪️ 自然灾害·应急小勇士",
+    "description": "学习地震、台风等自然灾害的应对方法，掌握紧急避险技能，保护自身安全。",
+    "link": "/practice/06-news01",
+    "imageUrl": "/practice/images/自然灾害.png",
+    "tags": ["自然灾害", "应急避险"]
+  },
+  {
+    "id": 11,
+    "title": "🚨 急救知识·生命小天使",
+    "description": "学习基本急救技能，掌握心肺复苏和外伤处理方法，关键时刻能救人救己。",
+    "link": "/practice/06-news02",
+    "imageUrl": "/practice/images/急救知识.png",
+    "tags": ["急救知识", "医疗安全"]
+  },
+  {
+    "id": 12,
+    "title": "🏠 居家安全·安全小管家",
+    "description": "学习家庭安全知识，掌握燃气使用、防盗防骗技巧，创建安全温馨的家。",
+    "link": "/practice/07-async-01",
+    "imageUrl": "/practice/images/居家安全.png",
+    "tags": ["居家安全", "生活安全"]
+  },
+  {
+    "id": 13,
+    "title": "🎭 心理安全·情绪小医生",
+    "description": "关注心理健康，学习情绪管理技巧，建立良好的人际关系，快乐成长每一天。",
+    "link": "/practice/07-async-02",
+    "imageUrl": "/practice/images/心理安全.png",
+    "tags": ["心理安全", "情绪管理"]
+  }
+] 
